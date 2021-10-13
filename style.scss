@@ -442,3 +442,155 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     }
 }
 
+.projectsContainer {
+    padding: 50px 2.5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-column-gap: 100px;
+    grid-row-gap: 100px;
+}
+
+.project {
+    
+    width: 350px;
+
+    img {
+        width: 350px;
+        box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.089);
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    // grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    // grid-column-gap: 20px;
+    // grid-row-gap: 20px;
+
+    .tag {
+        padding: 0.2rem 0.5rem;
+        margin: 5px;
+        font-size: 15px;
+        width: min-content;
+        border-radius: 8px;
+    }
+
+    .html {
+        background: #ff34017a;
+        border: 2px solid #ff3301;
+    }
+
+    .css {
+        background: #0184ff7a;
+        border: 2px solid #0184ff;
+    }
+    
+    .js {
+        background: #f7df1f7a;
+        border: 2px solid #e9ce00;
+    }
+
+    .jquery {
+        background: #0059ff7a;
+        border: 2px solid #0059ff;
+    }
+
+    .figma {
+        background: #ea00ff7a;
+        border: 2px solid #ea00ff;
+    }
+    
+    .netlify {
+        background: #0afdc859;
+        border: 2px solid #00ffbf;
+    }
+
+    .github {
+        background: #aaaaaa7a;
+        border: 2px solid #585858;
+    }
+}
+
+.projectName {
+    color: #292929d7;
+}
+
+.viewWork {
+    background: linear-gradient(to right, #24D695, #32BC9B);
+    padding: 0.5rem 1.7rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #ffffff;
+    border-radius: 10px;
+
+    div  {
+        height: 27px;
+        width: 2px;
+        background: #4e4e4e52;
+    }
+
+    h3 {
+        cursor: pointer;
+        font-weight: 500;
+    }
+}
+
+.contactSection {
+    background: #000;
+    min-height: 100vh;
+    position: relative;
+}
+
+.contactTitle {
+    color: rgb(248, 248, 248);    
+    font-size: 3rem;
+
+    span {
+        color: #25D998;
+    }
+}
+
+.contactContainer {
+    padding: 100px 5%;
+}
+
+.contactDescription {
+    font-size: 1.4rem;
+    color: #bbbbbb;
+    margin-left: 50px;
+
+    span {
+        color: #25D998;
+    }
+}
+
+.me {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 99vh;
+}
+
+.meMe {
+    color: #fff;
+    font-family: 'Gochi', cursive;
+    position: absolute;
+    right: 30%;
+    top: 50px;
+
+    img {
+        transform: rotate(290deg);
+        position: relative;
+    }
+
+    p {
+        transform: rotate(-25deg);
+        position: absolute;
+        left: -40px;
+        top: 20px;
+        font-size: 20px;
+    }
+}
