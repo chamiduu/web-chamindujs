@@ -637,7 +637,12 @@ header {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 99vh;
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: #00ffbf solid 2px;
 }
 
 .meMe {
@@ -661,5 +666,129 @@ header {
   left: -40px;
   top: 20px;
   font-size: 20px;
+}
+
+input {
+  width: 25vw;
+  height: 40px;
+  background: #2c2c2c;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  padding: 0 15px;
+  border-radius: 0 10px 10px 0;
+}
+
+input:focus {
+  outline: #313131 solid 2px;
+  background: #252525;
+}
+
+.inputSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.iconBox {
+  width: 50px;
+  height: 40px;
+  background: #414141;
+  border-radius: 10px 0 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.iconBox img {
+  width: 25px;
+}
+
+textarea {
+  width: 25vw;
+  height: 200px;
+  background: #2c2c2c;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 0 10px 10px 0;
+  resize: none;
+}
+
+textarea:focus {
+  outline: #313131 solid 2px;
+  background: #252525;
+}
+
+.iconBox-message {
+  width: 50px;
+  height: 200px;
+  background: #414141;
+  border-radius: 10px 0 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.iconBox-message img {
+  width: 25px;
+}
+
+.sendButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.iconBox-send {
+  width: 50px;
+  height: 40px;
+  background: #333333;
+  border-radius: 10px 0 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.iconBox-send img {
+  width: 25px;
+}
+
+.sendButtonText {
+  color: #303030;
+  font-size: 18px;
+  font-weight: 500;
+  background: #fff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.4rem 1rem;
+  border-radius: 0 10px 10px 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -571,7 +571,11 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 99vh;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: #00ffbf solid 2px;
 }
 
 .meMe {
@@ -593,4 +597,103 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
         top: 20px;
         font-size: 20px;
     }
+}
+
+input {
+    width: 25vw;
+    height: 40px;
+    background: #2c2c2c;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 15px;
+    border-radius: 0 10px 10px 0;
+
+    &:focus {
+        outline: rgb(49, 49, 49) solid 2px;
+        background: #252525;
+    }
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.iconBox {
+    width: 50px;
+    height: 40px;
+    background: #414141;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 25px;
+    }
+}
+
+textarea {
+    width: 25vw;
+    height: 200px;
+    background: #2c2c2c;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 0 10px 10px 0;
+    resize: none;
+
+    &:focus {
+        outline: rgb(49, 49, 49) solid 2px;
+        background: #252525;
+    }
+}
+
+.iconBox-message {
+    width: 50px;
+    height: 200px;
+    background: #414141;
+    border-radius: 10px 0 0 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 25px;
+    }
+}
+
+.sendButton {
+    display: flex;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.iconBox-send {
+    width: 50px;
+    height: 40px;
+    background: #333333;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 25px;
+    }
+
+}
+
+.sendButtonText {
+    color: rgb(48, 48, 48);
+    font-size: 18px;
+    font-weight: 500;
+    background: #fff;
+    width: max-content;
+    padding: 0.4rem 1rem;
+    border-radius: 0 10px 10px 0;
 }
