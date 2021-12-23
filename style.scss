@@ -28,13 +28,19 @@ nav {
     left: 0;
     width: 650px;
     z-index: 9;
-    background-color: #b6b6b66c;
-    backdrop-filter: blur(100px);
+    background-color: #b6b6b683;
+    backdrop-filter: blur(50px);
     border-radius: 0 0 50px 0;
     transition: 0.5s ease all;
 
+    @media (max-width: 550px) {
+        width: 100vw;
+        bottom: 0;
+        top: 100%;
+        border-radius: 50px 0 0  0;
+    }
     &:hover  {
-                background-color: #565656;
+                background-color: #e2e2e2;
             }
 
     ul {
@@ -97,6 +103,11 @@ header {
     padding: 0 10%;
     overflow: hidden;
     animation: headerAnime 5s ease-in-out infinite;
+
+    @media screen and (max-width: 550px) {
+        justify-content: flex-start;
+        padding: 0 5%;
+    }
 }
 
 @keyframes headerAnime {
@@ -117,12 +128,25 @@ header {
     position: absolute;
     right: 0;
     top: 0;
+    overflow: hidden;
+
+    @media screen and (max-width: 550px) {
+        z-index: 2;
+        top: -200px;
+        right: -450px;
+    }
 }
 
 .airpods {
     position: absolute;
     top: 30vh;
     left: 50%;
+
+    @media screen and (max-width: 550px) {
+        width: 100px;
+        left: 10%;
+        top: 35vh;
+    }
 }
 
 .hi {
@@ -133,6 +157,10 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 6rem;
+
+    @media screen and (max-width: 550px) {
+        font-size: 4rem;   
+    }
 }
 
 .hi span {
@@ -140,7 +168,7 @@ header {
     background: #25D998;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 6rem;
+    font-size: 4rem;
 }
 
 .name {
@@ -152,11 +180,20 @@ background: -moz-radial-gradient(circle farthest-side at center center, #4D4D4D 
 background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #0000006e 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+
+    @media screen and (max-width: 550px) {
+        font-size: 4rem;
+        margin-top: -30px;
+    }
  
 }
 
 .title {
     margin-top: 200px;
+    @media screen and (max-width: 550px) {
+        margin-top: 50px;
+        z-index: 3;
+    }
 }
 
 .role {
@@ -171,12 +208,15 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
 }
 
 .role:nth-child(3) {
-    margin-left: 100px;
+    margin-left: 120px;
 }
 
 .subtitle { 
     margin-top: 10px;
     position: relative;
+    @media screen and (max-width: 550px) {
+        margin-top: 40vh;
+    }
 }
 
 
@@ -209,12 +249,14 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
 
 .arrow {
     width: 150px;
+    @media screen and (max-width: 550px) {
+        width: 80px;
+    }
     
 }
 
 .more  {
     position: relative;
-  
 }
 
 .more span {
@@ -225,6 +267,15 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     color: rgba(0, 0, 0, 0.541);
     font-size: 1.8rem;
     left: 60px;
+
+    @media screen and (max-width: 550px) {
+        font-size: 1.3rem;
+    }
+    
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.541);
+    }
 }
 
 .scrollButton  { 
@@ -232,6 +283,13 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     bottom: 20px;
     left: 50%;
     width: 300px;
+    
+    @media screen and (max-width: 550px) {
+        left: 30%;
+        width: 250px;
+        bottom: 5px;
+        display: none;
+    }
 }
 
 .joke {
@@ -243,6 +301,12 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     bottom: 100px;
     right: 100px;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 550px) {
+        transform: scale(0.6);
+        bottom: 25vh;
+        right: 50px;
+    }
 
 }
 
@@ -274,9 +338,10 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
 .aboutSection {
     width: 100%;
     background: url("./Assets/aboutBG.jpg");
-    height: 100vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -297,9 +362,15 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     font-weight: 500;
     border-radius: 10px;
     display: inline-block;
+    
     margin: 0 10px;
     margin-top: 10px;
-    box-shadow: 5px 5px 0px 0px #b03fe4, -5px -5px 0px 0px #3096eb;
+    box-shadow: 5px 5px 0px 0px #11b2cd, -5px -5px 0px 0px #005b80;
+
+    @media screen and (max-width: 550px) {
+        max-width: 95vw;
+        min-width: min-content;
+    }
 }
 
 .detailContainer {
@@ -317,7 +388,10 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
         margin-bottom: 20px;
     }
 
-    
+    @media screen and (max-width: 550px) {
+        padding: 20px;
+        margin-top: 20px;
+    }    
 }
 
 .aboutContainer {
@@ -370,6 +444,8 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-column-gap: 50px;
+    justify-content: center;
+    align-items: center;
     grid-row-gap: 50px;
 }
 
@@ -383,6 +459,7 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     transition: 1s ease all;
     display: flex;
     justify-content: space-evenly;
+    justify-self: center;
     align-items: center;
     flex-direction: column;
 
@@ -405,7 +482,7 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
 
     &:hover {
         transform: rotateY(180deg) scale(1.1);
-        background: #d8d8d852;
+        background: #ffffffa9;
     }
 
     &:hover .desc {
@@ -428,6 +505,11 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     background-repeat: no-repeat;
     animation: workBg 30s ease infinite;
     min-height: 100vh;
+    
+    @media screen and (max-width: 550px) {
+        background-size: 1000%;
+    }
+        
 }
 
 @keyframes workBg {
@@ -456,7 +538,9 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
 
     img {
         width: 350px;
+        height: 200px;
         box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.089);
+        object-fit: cover;
     }
 }
 
@@ -471,7 +555,7 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
         padding: 0.2rem 0.5rem;
         margin: 5px;
         font-size: 15px;
-        width: min-content;
+        width: max-content;
         border-radius: 8px;
     }
 
@@ -509,6 +593,11 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
         background: #aaaaaa7a;
         border: 2px solid #585858;
     }
+
+    .react {
+        background: #00228165;
+        border: 2px solid #002381;
+    }
 }
 
 .projectName {
@@ -542,6 +631,7 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     background: #000;
     min-height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 .contactTitle {
@@ -554,7 +644,7 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
 }
 
 .contactContainer {
-    padding: 100px 5%;
+    padding: 100px 5% 0 5%;
 }
 
 .contactDescription {
@@ -569,13 +659,11 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
 
 .me {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: #00ffbf solid 2px;
+    top: -50px;
+    right: -150px;
+
+    width: 40%;
+    transform: rotate(-30deg);
 }
 
 .meMe {
@@ -584,6 +672,7 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
     position: absolute;
     right: 30%;
     top: 50px;
+    display: none;
 
     img {
         transform: rotate(290deg);
@@ -600,7 +689,7 @@ background: radial-gradient(circle farthest-side at center center, #4D4D4D 0%, #
 }
 
 input {
-    width: 25vw;
+    width: 35vw;
     height: 40px;
     background: #2c2c2c;
     border: none;
@@ -613,12 +702,22 @@ input {
         outline: rgb(49, 49, 49) solid 2px;
         background: #252525;
     }
+
+    @media screen and (max-width: 550px) {
+        width: 70vw;  
+    }
 }
 
 .inputSection {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
+    width: 60vw;
+
+    @media screen and (max-width: 550px) {
+        width: 90vw;
+        
+    }
 }
 
 .iconBox {
@@ -636,10 +735,11 @@ input {
 }
 
 textarea {
-    width: 25vw;
+    width: 35vw;
     height: 200px;
     background: #2c2c2c;
     border: none;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
     color: #fff;
     padding: 10px 15px;
@@ -649,6 +749,10 @@ textarea {
     &:focus {
         outline: rgb(49, 49, 49) solid 2px;
         background: #252525;
+    }
+
+    @media screen and (max-width: 550px) {
+        width: 70vw;  
     }
 }
 
@@ -671,6 +775,14 @@ textarea {
     display: flex;
     cursor: pointer;
     margin-top: 50px;
+    border: 0;
+    border-radius: 20px;
+    height: 40px;
+
+    @media screen and (max-width: 550px) {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
 }
 
 .iconBox-send {
@@ -691,9 +803,54 @@ textarea {
 .sendButtonText {
     color: rgb(48, 48, 48);
     font-size: 18px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 500;
     background: #fff;
     width: max-content;
     padding: 0.4rem 1rem;
     border-radius: 0 10px 10px 0;
+}
+
+.phoneNumber {
+    color: #fff;
+    padding-left: 30px;
+    font-size: 22px;
+
+    
+}
+
+.phoneContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: max-content;
+    margin-bottom: 50px;
+}
+
+.phoneIcon {
+    height: 80px;
+    padding-right: 30px;
+    border-right: 2px solid #383838;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+        width: 35px;
+    }
+    a {
+        margin-bottom: -10px;
+    }
+}
+
+.contactContainerr {
+    padding: 80px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+    grid-column-gap: 100px;
+    grid-row-gap: 100px;
+
 }

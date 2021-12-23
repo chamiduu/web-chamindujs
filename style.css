@@ -28,16 +28,25 @@ nav {
   left: 0;
   width: 650px;
   z-index: 9;
-  background-color: #b6b6b66c;
-  -webkit-backdrop-filter: blur(100px);
-          backdrop-filter: blur(100px);
+  background-color: #b6b6b683;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   border-radius: 0 0 50px 0;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
 
+@media (max-width: 550px) {
+  nav {
+    width: 100vw;
+    bottom: 0;
+    top: 100%;
+    border-radius: 50px 0 0  0;
+  }
+}
+
 nav:hover {
-  background-color: #565656;
+  background-color: #e2e2e2;
 }
 
 nav ul {
@@ -122,6 +131,15 @@ header {
           animation: headerAnime 5s ease-in-out infinite;
 }
 
+@media screen and (max-width: 550px) {
+  header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0 5%;
+  }
+}
+
 @-webkit-keyframes headerAnime {
   0% {
     background-position: left;
@@ -150,12 +168,29 @@ header {
   position: absolute;
   right: 0;
   top: 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 550px) {
+  .keyboard {
+    z-index: 2;
+    top: -200px;
+    right: -450px;
+  }
 }
 
 .airpods {
   position: absolute;
   top: 30vh;
   left: 50%;
+}
+
+@media screen and (max-width: 550px) {
+  .airpods {
+    width: 100px;
+    left: 10%;
+    top: 35vh;
+  }
 }
 
 .hi {
@@ -167,12 +202,18 @@ header {
   font-size: 6rem;
 }
 
+@media screen and (max-width: 550px) {
+  .hi {
+    font-size: 4rem;
+  }
+}
+
 .hi span {
   color: #25D998;
   background: #25D998;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
 .name {
@@ -184,8 +225,22 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
+@media screen and (max-width: 550px) {
+  .name {
+    font-size: 4rem;
+    margin-top: -30px;
+  }
+}
+
 .title {
   margin-top: 200px;
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    margin-top: 50px;
+    z-index: 3;
+  }
 }
 
 .role {
@@ -200,12 +255,18 @@ header {
 }
 
 .role:nth-child(3) {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 
 .subtitle {
   margin-top: 10px;
   position: relative;
+}
+
+@media screen and (max-width: 550px) {
+  .subtitle {
+    margin-top: 40vh;
+  }
 }
 
 .line.one {
@@ -239,6 +300,12 @@ header {
   width: 150px;
 }
 
+@media screen and (max-width: 550px) {
+  .arrow {
+    width: 80px;
+  }
+}
+
 .more {
   position: relative;
 }
@@ -254,11 +321,31 @@ header {
   left: 60px;
 }
 
+@media screen and (max-width: 550px) {
+  .more span {
+    font-size: 1.3rem;
+  }
+}
+
+.more span a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.541);
+}
+
 .scrollButton {
   position: absolute;
   bottom: 20px;
   left: 50%;
   width: 300px;
+}
+
+@media screen and (max-width: 550px) {
+  .scrollButton {
+    left: 30%;
+    width: 250px;
+    bottom: 5px;
+    display: none;
+  }
 }
 
 .joke {
@@ -270,6 +357,15 @@ header {
   bottom: 100px;
   right: 100px;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 550px) {
+  .joke {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    bottom: 25vh;
+    right: 50px;
+  }
 }
 
 .joke-text {
@@ -300,9 +396,10 @@ header {
 .aboutSection {
   width: 100%;
   background: url("./Assets/aboutBG.jpg");
-  height: 100vh;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -327,8 +424,17 @@ header {
   display: inline-block;
   margin: 0 10px;
   margin-top: 10px;
-  -webkit-box-shadow: 5px 5px 0px 0px #b03fe4, -5px -5px 0px 0px #3096eb;
-          box-shadow: 5px 5px 0px 0px #b03fe4, -5px -5px 0px 0px #3096eb;
+  -webkit-box-shadow: 5px 5px 0px 0px #11b2cd, -5px -5px 0px 0px #005b80;
+          box-shadow: 5px 5px 0px 0px #11b2cd, -5px -5px 0px 0px #005b80;
+}
+
+@media screen and (max-width: 550px) {
+  .detail {
+    max-width: 95vw;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+  }
 }
 
 .detailContainer {
@@ -347,6 +453,13 @@ header {
   display: inline-block;
   font-size: 20px;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 550px) {
+  .detailContainer {
+    padding: 20px;
+    margin-top: 20px;
+  }
 }
 
 .aboutContainer {
@@ -400,6 +513,12 @@ header {
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-column-gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   grid-row-gap: 50px;
 }
 
@@ -419,6 +538,7 @@ header {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  justify-self: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -450,7 +570,7 @@ header {
 .skill:hover {
   -webkit-transform: rotateY(180deg) scale(1.1);
           transform: rotateY(180deg) scale(1.1);
-  background: #d8d8d852;
+  background: #ffffffa9;
 }
 
 .skill:hover .desc {
@@ -473,6 +593,12 @@ header {
   -webkit-animation: workBg 30s ease infinite;
           animation: workBg 30s ease infinite;
   min-height: 100vh;
+}
+
+@media screen and (max-width: 550px) {
+  .workSection {
+    background-size: 1000%;
+  }
 }
 
 @-webkit-keyframes workBg {
@@ -515,8 +641,11 @@ header {
 
 .project img {
   width: 350px;
+  height: 200px;
   -webkit-box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.089);
           box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.089);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .tags {
@@ -531,9 +660,9 @@ header {
   padding: 0.2rem 0.5rem;
   margin: 5px;
   font-size: 15px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   border-radius: 8px;
 }
 
@@ -572,6 +701,11 @@ header {
   border: 2px solid #585858;
 }
 
+.tags .react {
+  background: #00228165;
+  border: 2px solid #002381;
+}
+
 .projectName {
   color: #292929d7;
 }
@@ -608,6 +742,7 @@ header {
   background: #000;
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .contactTitle {
@@ -620,7 +755,7 @@ header {
 }
 
 .contactContainer {
-  padding: 100px 5%;
+  padding: 100px 5% 0 5%;
 }
 
 .contactDescription {
@@ -635,14 +770,11 @@ header {
 
 .me {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-  border: #00ffbf solid 2px;
+  top: -50px;
+  right: -150px;
+  width: 40%;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
 }
 
 .meMe {
@@ -651,6 +783,7 @@ header {
   position: absolute;
   right: 30%;
   top: 50px;
+  display: none;
 }
 
 .meMe img {
@@ -669,7 +802,7 @@ header {
 }
 
 input {
-  width: 25vw;
+  width: 35vw;
   height: 40px;
   background: #2c2c2c;
   border: none;
@@ -684,6 +817,12 @@ input:focus {
   background: #252525;
 }
 
+@media screen and (max-width: 550px) {
+  input {
+    width: 70vw;
+  }
+}
+
 .inputSection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -693,6 +832,13 @@ input:focus {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-bottom: 20px;
+  width: 60vw;
+}
+
+@media screen and (max-width: 550px) {
+  .inputSection {
+    width: 90vw;
+  }
 }
 
 .iconBox {
@@ -716,10 +862,11 @@ input:focus {
 }
 
 textarea {
-  width: 25vw;
+  width: 35vw;
   height: 200px;
   background: #2c2c2c;
   border: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 18px;
   color: #fff;
   padding: 10px 15px;
@@ -730,6 +877,12 @@ textarea {
 textarea:focus {
   outline: #313131 solid 2px;
   background: #252525;
+}
+
+@media screen and (max-width: 550px) {
+  textarea {
+    width: 70vw;
+  }
 }
 
 .iconBox-message {
@@ -758,6 +911,16 @@ textarea:focus {
   display: flex;
   cursor: pointer;
   margin-top: 50px;
+  border: 0;
+  border-radius: 20px;
+  height: 40px;
+}
+
+@media screen and (max-width: 550px) {
+  .sendButton {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
 }
 
 .iconBox-send {
@@ -783,6 +946,16 @@ textarea:focus {
 .sendButtonText {
   color: #303030;
   font-size: 18px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 500;
   background: #fff;
   width: -webkit-max-content;
@@ -790,5 +963,62 @@ textarea:focus {
   width: max-content;
   padding: 0.4rem 1rem;
   border-radius: 0 10px 10px 0;
+}
+
+.phoneNumber {
+  color: #fff;
+  padding-left: 30px;
+  font-size: 22px;
+}
+
+.phoneContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-bottom: 50px;
+}
+
+.phoneIcon {
+  height: 80px;
+  padding-right: 30px;
+  border-right: 2px solid #383838;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.phoneIcon img {
+  width: 35px;
+}
+
+.phoneIcon a {
+  margin-bottom: -10px;
+}
+
+.contactContainerr {
+  padding: 80px 5%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30vw, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+  grid-column-gap: 100px;
+  grid-row-gap: 100px;
 }
 /*# sourceMappingURL=style.css.map */
